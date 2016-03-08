@@ -21,11 +21,12 @@ struct userdef_result_t {
 };
 
 mw_work_t **create_work(int argc, char** argv) {
-
+    char ds[] = "100";
+    char chun[] = "4";
     mpz_t dividend, divisor, chunk_sz_long, dividend_root, dv_q, dv_r;
 
-    mpz_init_set_str(dividend, argv[1], 10);
-    mpz_init_set_str(chunk_sz_long, argv[2], 10);
+    mpz_init_set_str(dividend, ds, 10);
+    mpz_init_set_str(chunk_sz_long, chun, 10);
     mpz_init_set_ui(divisor, 1);
 
     mpz_init(dividend_root);
@@ -121,3 +122,4 @@ int main (int argc, char **argv)
     return 0;
 
 }
+
